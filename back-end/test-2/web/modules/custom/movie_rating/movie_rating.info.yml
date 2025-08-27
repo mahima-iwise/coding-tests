@@ -1,0 +1,7 @@
+name: 'Movie Rating'
+type: module
+description: 'Provides movie rating functionality with form and display.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - drupal:node

@@ -1,17 +1,446 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8" />
-    <title>New Relic Coding Test</title>
-    <link href="src/css/output.css" rel="stylesheet">
-    <script src="src/js/index.js" type="text/javascript"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>New Relic Pricing</title>
+  <!-- Google Fonts Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Base font and color */
+    html, body {
+      font-family: 'Open Sans', sans-serif;
+      color: #2C2C2C; /* Charcoal */
+    }
+    /* Scroll smooth for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: '#2C2C2C',
+            teal: '#0AB0BF',
+            blue: '#0069CE',
+            darkteal: '#00838F',
+            orange: '#FF8853',
+          },
+          fontSize: {
+            h1: ['40px', { lineHeight: '48px', fontWeight: '400' }],
+            h2: ['32px', { lineHeight: '48px', fontWeight: '400' }],
+            h3: ['24px', { lineHeight: '32px', fontWeight: '600' }],
+            h4: ['20px', { lineHeight: '28px', fontWeight: '600' }],
+            body: ['16px', { lineHeight: '28px', fontWeight: '400' }],
+            link: ['16px', { lineHeight: '28px', fontWeight: '600' }],
+          }
+        }
+      }
+    }
+  </script>
 </head>
+<body class="min-h-screen flex flex-col">
 
-<body>
- <header></header>
- <main></main>
- <footer></footer>
+  <!-- HEADER -->
+  <header class="flex items-center justify-between px-6 md:px-16 py-4 border-b border-gray-200">
+    <a href="#" class="flex items-center space-x-2">
+      <img  width="24" height="24" aria-hidden="true" src="/src/images/logos/new-relic.svg" alt="Logo" class="w-8 h-8">
+      <span class="font-semibold text-charcoal text-xl select-none">New Relic.</span>
+    </a>
+
+    <nav class="hidden lg:flex space-x-8 font-normal text-base text-charcoal">
+      <a href="#" class="hover:text-teal transition">Products</a>
+      <a href="#" class="hover:text-teal transition">Pricing</a>
+      <a href="#" class="hover:text-teal transition">Solutions</a>
+      <a href="#" class="hover:text-teal transition">Help Center</a>
+      <a href="#" class="hover:text-teal transition">About</a>
+    </nav>
+
+    <div class="hidden lg:flex items-center space-x-4">
+      <button class="text-charcoal text-body font-normal hover:text-teal transition">Log in</button>
+      <button class="bg-teal px-5 py-2 rounded text-white text-body font-semibold hover:bg-darkteal transition">Sign up</button>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false" class="lg:hidden p-2 rounded text-charcoal hover:text-teal focus:outline-none focus:ring-2 focus:ring-teal">
+      <svg id="hamburgerIcon" class="block w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg id="closeIcon" class="hidden w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav id="mobileMenu" class="lg:hidden fixed inset-0 bg-white z-50 p-6 hidden flex-col space-y-6 overflow-y-auto">
+    <div class="flex justify-end">
+      <button id="mobileMenuCloseBtn" aria-label="Close menu" class="p-2 text-charcoal hover:text-teal focus:outline-none focus:ring-2 focus:ring-teal rounded">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="flex flex-col space-y-4 font-normal text-charcoal text-lg">
+      <li><a href="#" class="hover:text-teal transition">Products</a></li>
+      <li><a href="#" class="hover:text-teal transition">Pricing</a></li>
+      <li><a href="#" class="hover:text-teal transition">Solutions</a></li>
+      <li><a href="#" class="hover:text-teal transition">Help Center</a></li>
+      <li><a href="#" class="hover:text-teal transition">About</a></li>
+      <li><button class="w-full bg-teal text-white font-semibold py-2 rounded hover:bg-darkteal transition">Sign up</button></li>
+      <li><button class="w-full border border-charcoal font-normal text-charcoal py-2 rounded hover:text-teal transition">Log in</button></li>
+    </ul>
+  </nav>
+
+  <main class="flex-grow pt-12 px-6 md:px-16 max-w-7xl mx-auto">
+
+    <!-- Heading -->
+    <section class="text-center max-w-4xl mx-auto mb-12">
+      <h1 class="text-charcoal text-h2 font-normal mb-1 select-none">
+        Simple, transparent pricing plans.<br />
+        Only pay for what you use.
+      </h1>
+      <p class="text-charcoal text-body font-normal">
+        Start for free. No credit card required.
+      </p>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          
+        <!-- Free -->
+        <div class="rounded md:rounded-l-xl md:rounded-r-none shadow-lg border overflow-hidden">
+        <div class="bg-cyan-600 text-white text-center py-4 font-semibold text-lg">
+          Free
+        </div>
+        <div class="p-6">
+          <p class="text-sm text-gray-600 mb-3">
+          For individuals just getting started with New Relic or test projects.
+          </p>
+          <br />
+          <p class="text-2xl font-bold">$0 <span class="text-base font-normal">/ Forever</span></p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-700">
+          <li>✔ 100 GBs / month free <span class="text-gray-500">$0.25 / GB beyond</span></li>
+          <li>✔ 1 free full platform user <span class="italic text-gray-500">Access to all capabilities</span></li>
+          </ul>
+          <button class="mt-6 w-full bg-cyan-700 text-white py-2 rounded-lg font-medium hover:bg-cyan-700 transition">
+          Start for Free
+          </button>
+          <hr class="my-6">
+          <ul class="space-y-2 text-sm text-gray-700">
+          <li>✔ Unlimited basic users, queries, dashboards & alerts</li>
+          <li>✔ Standard retention</li>
+          </ul>
+        </div>
+        </div>
+
+        <!-- Standard -->
+        <div class="shadow-lg border overflow-hidden">
+        <div class="bg-blue-600 text-white text-center py-4 font-semibold text-lg" style="background-color: #0069CE;">
+          Standard
+        </div>
+        <div class="p-6">
+          <p class="text-sm text-gray-600 mb-3">
+          For growing teams monitoring production apps.
+          </p>
+          <br />
+          <p class="text-2xl font-bold">$0.25 <span class="text-base font-normal">/ GB</span></p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-700">
+          <li>✔ 100 GBs / month free <span class="text-gray-500">$0.25 / GB beyond</span></li>
+          <li>✔ $99 / full platform user <span class="italic text-gray-500">Includes 1 free, max of 5</span></li>
+          </ul>
+          <button class="mt-6 w-full bg-cyan-700 text-white py-2 rounded-lg font-medium hover:bg-blue-800 transition">
+          Start Now
+          </button>
+          <hr class="my-6">
+          <ul class="space-y-2 text-sm text-gray-700">
+          <li>✔ Unlimited basic users, queries, dashboards & alerts</li>
+          <li>✔ Standard retention</li>
+          </ul>
+        </div>
+        </div>
+
+        <!-- Pro -->
+        <div class="shadow-lg border overflow-hidden">
+        <div class="bg-orange-500 text-white text-center py-4 font-semibold text-lg" style="background-color: #FF8853;">
+          Pro
+        </div>
+        <div class="p-6">
+          <p class="text-sm text-gray-600 mb-3">
+          For teams and companies with more than 5 engineers and complex workloads.
+          </p>
+          <p class="text-2xl font-bold">Contact for pricing</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-700">
+          <li>✔ 100 GBs / month free <span class="text-gray-500">$0.25 / GB beyond</span></li>
+          <li>✔ Predictable full platform & core user commit pricing</li>
+          </ul>
+          <button class="mt-6 w-full border border-cyan-700 text-cyan-700 py-2 rounded-lg font-medium hover:bg-gray-50 transition">
+          Contact Sales
+          </button>
+          <hr class="my-6">
+          <ul class="space-y-2 text-sm text-gray-700">
+          <li>✔ Unlimited basic users, queries, dashboards & alerts</li>
+          <li>✔ Extended retention</li>
+          <li>✔ Advanced admin features</li>
+          <li>✔ 24x7 support availability</li>
+          </ul>
+        </div>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="rounded md:rounded-r-xl md:rounded-l-none shadow-lg border overflow-hidden">
+        <div class="bg-gray-900 text-white text-center py-4 font-semibold text-lg">
+          Enterprise
+        </div>
+        <div class="p-6">
+          <p class="text-sm text-gray-600 mb-3">
+          For companies with advanced security and support needs.
+          </p>
+          <br/>
+          <p class="text-2xl font-bold">Contact for pricing</p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-700">
+          <li>✔ 100 GBs / month free <span class="text-gray-500">$0.25 / GB beyond</span></li>
+          <li>✔ Predictable full platform & core user commit pricing</li>
+          </ul>
+          <button class="mt-6 w-full border border-cyan-700 text-cyan-700 py-2 rounded-lg font-medium hover:bg-gray-50 transition">
+          Contact Sales
+          </button>
+          <hr class="my-6">
+          <ul class="space-y-2 text-sm text-gray-700">
+          <li>✔ Unlimited basic users, queries, dashboards & alerts</li>
+          <li>✔ Extended retention</li>
+          <li>✔ Enterprise admin, security & compliance features</li>
+          <li>✔ 24x7 designated support + priority ticket routing</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hidden lg:block max-w-6xl mx-auto my-12 px-4">
+      <!-- Heading -->
+      <h2 class="text-2xl font-semibold text-center mb-6">Compare features and plans</h2>
+
+      <!-- Plans row -->
+      <div class="grid grid-cols-5 border-b text-sm font-medium">
+        <div class="border-r"></div>
+        <div class="text-center py-3 border-r" style="border-top-color: #0AB0BF; border-top-width: 4px;">Free</div>
+        <div class="text-center py-3 border-r" style="border-top-color: #0069CE; border-top-width: 4px;">Standard</div>
+        <div class="text-center py-3 border-r" style="border-top-color: #FF8853; border-top-width: 4px;">Pro</div>
+        <div class="text-center py-3" style="border-top-color: #2C2C2C; border-top-width: 4px;">Enterprise</div>
+      </div>
+
+      <!-- Section: Data Usage -->
+      <div class="text-xs font-bold uppercase tracking-wide py-8 px-2 border-b">
+        Data Usage
+      </div>
+
+      <!-- Row: Free limits -->
+      <div class="grid grid-cols-5 border-b text-sm">
+        <div class="py-3 px-2 font-medium">Free limits</div>
+        <div class="py-3 px-2 text-center border-l">100GB free / month</div>
+        <div class="py-3 px-2 text-center border-l">100GB free / month</div>
+        <div class="py-3 px-2 text-center border-l">100GB free / month</div>
+        <div class="py-3 px-2 text-center border-l">100GB free / month</div>
+      </div>
+
+      <!-- Row: Cost per GB -->
+      <div class="grid grid-cols-5 border-b text-sm">
+        <div class="py-3 px-2 font-medium">Cost per GB</div>
+        <div class="py-3 px-2 text-center border-l">N/A</div>
+        <div class="py-3 px-2 text-center border-l">$0.25 / GB beyond free limit</div>
+        <div class="py-3 px-2 text-center border-l">N/A</div>
+        <div class="py-3 px-2 text-center border-l">N/A</div>
+      </div>
+
+      <!-- Row: Retention -->
+      <div class="grid grid-cols-5 border-b text-sm">
+        <div class="py-3 px-2 font-medium">Retention</div>
+        <div class="py-3 px-2 text-center border-l">8+ days</div>
+        <div class="py-3 px-2 text-center border-l">8+ days</div>
+        <div class="py-3 px-2 text-center border-l">Extended</div>
+        <div class="py-3 px-2 text-center border-l">Extended</div>
+      </div>
+
+      <!-- Row: HIPAA compliance -->
+      <div class="grid grid-cols-5 border-b text-sm">
+        <div class="py-3 px-2 font-medium">HIPAA compliance</div>
+        <div class="py-3 px-2 text-center border-l text-gray-400">✕</div>
+        <div class="py-3 px-2 text-center border-l text-gray-400">✕</div>
+        <div class="py-3 px-2 text-center border-l text-gray-400">✕</div>
+        <div class="py-3 px-2 text-center border-l text-green-600">✔</div>
+      </div>
+
+      <!-- Row: FedRAMP -->
+      <div class="grid grid-cols-5 border-b text-sm">
+        <div class="py-3 px-2 font-medium">FedRAMP</div>
+        <div class="py-3 px-2 text-center border-l text-gray-400">✕</div>
+        <div class="py-3 px-2 text-center border-l text-gray-400">✕</div>
+        <div class="py-3 px-2 text-center border-l text-gray-400">✕</div>
+        <div class="py-3 px-2 text-center border-l text-green-600">✔</div>
+      </div>
+    </section>
+
+
+    <!-- Logos section -->
+    <section class="flex gap-1 md:gap-4 lg:gap-10 mb-20 max-w-6xl mx-auto">
+      <!-- Replace these with real SVG logos or images -->
+      <img src="src/images/logos/Homepage_Gray_EpicGames.png" alt="Epic Games" class="h-10 sm:h-12 md:h-14 lg:h-20 object-contain" />
+      <img src="src/images/logos/Homepage_Gray_Atlassian.png" alt="Atlassian" class="h-10 sm:h-12 md:h-14 lg:h-20 object-contain" />
+      <img src="src/images/logos/Homepage_Gray_Doordash.png" alt="DoorDash" class="h-10 sm:h-12 md:h-14 lg:h-20 object-contain" />
+      <img src="src/images/logos/Homepage_Gray_Cloudflare.png" alt="Cloudflare" class="h-10 sm:h-12 md:h-14 lg:h-20 object-contain" />
+      <img src="src/images/logos/Homepage_Gray_Github.png" alt="GitHub" class="h-10 sm:h-12 md:h-14 lg:h-20 object-contain" />
+    </section>
+
+    <!-- Articles / Benefits cards -->
+    <section class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto mb-20">
+      <article class="border border-gray-200 rounded-md overflow-hidden shadow-sm bg-white flex flex-col">
+        <img src="/src/images/cards/card-1.png" alt="Compare observability costs" class="w-full h-48 object-cover" />
+        <div class="p-4 flex flex-col flex-grow">
+          <h3 class="text-charcoal text-h4 font-semibold mb-2 select-text">
+            Compare full-stack observability costs: New Relic, Datadog, and Dynatrace
+          </h3>
+          <a href="#" class="text-teal text-link font-semibold hover:underline self-start mt-auto" aria-label="Read article Compare full-stack observability costs">
+            Read Article &gt;
+          </a>
+        </div>
+      </article>
+
+      <article class="border border-gray-200 rounded-md overflow-hidden shadow-sm bg-white flex flex-col">
+        <img src="/src/images/cards/card-2.png" alt="New Relic consumption pricing" class="w-full h-48 object-cover" />
+        <div class="p-4 flex flex-col flex-grow">
+          <h3 class="text-charcoal text-h4 font-semibold mb-2 select-text">
+            New Relic consumption pricing: Get more value for your money
+          </h3>
+          <a href="#" class="text-teal text-link font-semibold hover:underline self-start mt-auto" aria-label="Read article New Relic consumption pricing">
+            Read Article &gt;
+          </a>
+        </div>
+      </article>
+
+      <article class="border border-gray-200 rounded-md overflow-hidden shadow-sm bg-white flex flex-col">
+        <img src="/src/images/cards/card-3.png" alt="New Relic annual pool of funds simplifies observability pricing" class="w-full h-48 object-cover" />
+        <div class="p-4 flex flex-col flex-grow">
+          <h3 class="text-charcoal text-h4 font-semibold mb-2 select-text">
+            New Relic annual pool of funds simplifies observability pricing
+          </h3>
+          <a href="#" class="text-teal text-link font-semibold hover:underline self-start mt-auto" aria-label="Read article New Relic annual pool of funds">
+            Read Article &gt;
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-charcoal text-white pt-10 pb-6 px-6 md:px-16">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+
+      <!-- Try new relic -->
+      <div>
+        <p class="font-semibold text-h4 mb-3">Try New Relic Today</p>
+        <p class="font-normal text-body max-w-xs mb-4 leading-relaxed">Monitor all your systems and data with the entire New Relic Platform. It’s free forever.</p>
+        <div class="flex space-x-3">
+          <button class="bg-teal py-2 px-4 rounded font-semibold text-body hover:bg-darkteal transition">Start for free</button>
+          <button class="border border-white py-2 px-4 rounded font-normal text-body hover:bg-white hover:text-charcoal transition">Get a demo</button>
+        </div>
+      </div>
+
+      <!-- Company links -->
+      <div class="grid grid-cols-2 md:grid-cols-1 gap-y-4 text-xs md:text-sm">
+        <h6 class="uppercase font-semibold tracking-wide mb-4 select-none">Company</h6>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-teal transition">About us</a></li>
+          <li><a href="#" class="hover:text-teal transition">Leadership</a></li>
+          <li><a href="#" class="hover:text-teal transition">Careers</a></li>
+          <li><a href="#" class="hover:text-teal transition">Diversity and Inclusion</a></li>
+          <li><a href="#" class="hover:text-teal transition">Social Impact</a></li>
+          <li><a href="#" class="hover:text-teal transition">Newsroom</a></li>
+        </ul>
+      </div>
+
+      <!-- Customers links -->
+      <div class="grid grid-cols-2 md:grid-cols-1 gap-y-4 text-xs md:text-sm">
+        <h6 class="uppercase font-semibold tracking-wide mb-4 select-none">Customers</h6>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-teal transition">Customer stories</a></li>
+          <li><a href="#" class="hover:text-teal transition">Partner Program</a></li>
+          <li><a href="#" class="hover:text-teal transition">Investor Relations</a></li>
+          <li><a href="#" class="hover:text-teal transition">Suppliers Portal</a></li>
+          <li><a href="#" class="hover:text-teal transition">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Follow us -->
+      <div>
+        <h6 class="uppercase font-semibold tracking-wide mb-4 select-none">Follow Us</h6>
+        <div class="flex space-x-4 text-white text-xl">
+          <a href="#" aria-label="GitHub" class="hover:text-teal transition">GitHub</a>
+          <a href="#" aria-label="Twitch" class="hover:text-teal transition">Twitch</a>
+          <a href="#" aria-label="Twitter" class="hover:text-teal transition">Twitter</a>
+          <a href="#" aria-label="Facebook" class="hover:text-teal transition">Facebook</a>
+        </div>
+        <div class="flex space-x-4 text-white text-xl mt-3">
+          <a href="#" aria-label="LinkedIn" class="hover:text-teal transition">LinkedIn</a>
+          <a href="#" aria-label="Instagram" class="hover:text-teal transition">Instagram</a>
+          <a href="#" aria-label="YouTube" class="hover:text-teal transition">YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-gray-600 my-6" />
+
+    <!-- Bottom footer -->
+    <div class="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0 text-xs text-gray-400 select-none">
+      <p>©2008-20 New Relic, Inc. All rights reserved</p>
+      <nav class="space-x-3">
+        <a href="#" class="hover:text-teal transition">Terms of Service</a>
+        <a href="#" class="hover:text-teal transition">DMCA Policy</a>
+        <a href="#" class="hover:text-teal transition">Privacy Policy</a>
+        <a href="#" class="hover:text-teal transition">Cookie Policy</a>
+        <a href="#" class="hover:text-teal transition">UK Slavery Act of 2015</a>
+      </nav>
+      <nav class="space-x-3 flex flex-wrap justify-center md:justify-start">
+        <a href="#" class="hover:text-teal transition">日本語</a>
+        <a href="#" class="hover:text-teal transition">Français</a>
+        <a href="#" class="hover:text-teal transition">Deutsch</a>
+        <a href="#" class="hover:text-teal transition">한국어</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    const mobileMenuCloseBtn = document.getElementById('mobileMenuCloseBtn');
+
+    function toggleMenu() {
+      const expanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+      hamburgerBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    }
+
+    hamburgerBtn.addEventListener('click', toggleMenu);
+    mobileMenuCloseBtn.addEventListener('click', toggleMenu);
+
+    // Add tablet/mobile class to all buttons
+    function updateButtonClasses() {
+      const buttons = document.querySelectorAll('button');
+      buttons.forEach(btn => {
+        btn.classList.remove('tablet', 'mobile');
+      });
+      const width = window.innerWidth;
+      if (width <= 768 && width > 480) {
+        buttons.forEach(btn => btn.classList.add('tablet'));
+      } else if (width <= 480) {
+        buttons.forEach(btn => btn.classList.add('mobile'));
+      }
+    }
+    window.addEventListener('resize', updateButtonClasses);
+    window.addEventListener('load', updateButtonClasses);
+</script>
 </body>
-
 </html>

@@ -1,0 +1,8 @@
+uuid: 71889cac-5950-4edd-82d7-157f0b067a99
+langcode: en
+status: true
+dependencies: {  }
+name: Category
+vid: category
+description: 'This taxonomy will hold categories of movies'
+weight: 0

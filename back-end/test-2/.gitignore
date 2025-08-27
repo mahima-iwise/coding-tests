@@ -1,0 +1,28 @@
+# Ignore configuration files that may contain sensitive information
+/web/sites/*/*settings*.php
+/web/sites/*/*services*.yml
+
+# Ignore paths that may contain user-generated content
+/web/sites/development.services.yml
+
+# Ignore contrib modules. These should be created during build process.
+/web/**/contrib
+/web/libraries
+/web/Commands
+
+# Ignore custom theme build artifacts
+/web/themes/custom/*/node_modules
+/web/themes/custom/*/styleguide
+
+# Ignore drupal core (if not versioning drupal sources)
+/vendor
+/web/core
+/web/autoload.php
+
+# Ignore compiled PHP caches
+/web/sites/default/files/php
+/web/sites/default/files/js
+/web/sites/default/files/css
+/web/sites/default/files/styles
+/web/sites/default/files/languages
+/web/sites/default/files/config_*

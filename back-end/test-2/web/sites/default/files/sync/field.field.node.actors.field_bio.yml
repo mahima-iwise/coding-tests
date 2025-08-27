@@ -1,0 +1,30 @@
+uuid: f4497964-f056-4975-8211-71ea4a4a3652
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bio
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.plain_text
+    - filter.format.restricted_html
+    - node.type.actors
+  module:
+    - text
+id: node.actors.field_bio
+field_name: field_bio
+entity_type: node
+bundle: actors
+label: Bio
+description: "This field will hold the information of the actor's Bio"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - restricted_html
+    - full_html
+    - plain_text
+field_type: text_long

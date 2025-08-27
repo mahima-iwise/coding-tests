@@ -1,0 +1,12 @@
+.movie-rating-stars {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+.movie-rating-stars span {
+  font-size: 2rem;
+  color: #ccc;
+}
+.movie-rating-stars span.active {
+  color: gold;
+}

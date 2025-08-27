@@ -1,0 +1,23 @@
+uuid: 8a437038-314b-4562-a08f-9e9b7403e800
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year_of_release
+    - node.type.movies
+  module:
+    - yearonly
+id: node.movies.field_year_of_release
+field_name: field_year_of_release
+entity_type: node
+bundle: movies
+label: 'Year of Release'
+description: 'This field will hold the Release date of this movie.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '1900'
+  yearonly_to: now
+field_type: yearonly

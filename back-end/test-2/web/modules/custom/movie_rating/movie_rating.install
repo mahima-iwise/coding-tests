@@ -1,0 +1,21 @@
+<?php
+
+use Drupal\Core\Database\SchemaObjectExistsException;
+
+/**
+ * Implements hook_schema().
+ */
+function movie_rating_schema() {
+  $schema['movie_rating'] = [
+    'description' => 'Stores ratings for movies',
+    'fields' => [
+      'id' => ['type' => 'serial', 'not null' => TRUE],
+      'nid' => ['type' => 'int', 'not null' => TRUE],
+      'rating' => ['type' => 'int', 'not null' => TRUE],
+      'ip_address' => ['type' => 'varchar', 'length' => 64, 'not null' => TRUE],
+      'created' => ['type' => 'int', 'not null' => TRUE],
+    ],
+    'primary key' => ['id'],
+  ];
+  return $schema;
+}

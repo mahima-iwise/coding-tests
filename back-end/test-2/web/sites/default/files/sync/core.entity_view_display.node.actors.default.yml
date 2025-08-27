@@ -1,0 +1,28 @@
+uuid: 68a78e16-6896-4dce-a426-e882d3821288
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.actors.field_bio
+    - node.type.actors
+  module:
+    - text
+    - user
+id: node.actors.default
+targetEntityType: node
+bundle: actors
+mode: default
+content:
+  field_bio:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

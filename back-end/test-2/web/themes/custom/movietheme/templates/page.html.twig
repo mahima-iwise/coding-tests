@@ -1,0 +1,42 @@
+{#
+  Custom page template for movietheme.
+  Based on Olivero layout, with added left sidebar region.
+#}
+
+<div class="site-container">
+
+  {% if page.header %}
+    <header class="site-header" role="banner">
+      {{ page.header }}
+    </header>
+  {% endif %}
+
+  {% if page.primary_menu %}
+    <div class="site-navigation">
+      {{ page.primary_menu }}
+    </div>
+  {% endif %}
+
+  <div class="site-main">
+    <div class="layout-content">
+
+      {% if page.sidebar_left %}
+        <aside class="sidebar-left layout-sidebar-first" role="complementary">
+          {{ page.sidebar_left }}
+        </aside>
+      {% endif %}
+
+      <main role="main" class="main-content">
+        <a id="main-content" tabindex="-1"></a>
+        {{ page.content }}
+      </main>
+
+    </div>
+  </div>
+
+  {% if page.footer %}
+    <footer class="site-footer" role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+</div>

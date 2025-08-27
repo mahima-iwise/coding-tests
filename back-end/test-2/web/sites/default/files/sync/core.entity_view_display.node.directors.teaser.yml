@@ -1,0 +1,22 @@
+uuid: da410bcd-1704-4637-87a7-7749b0b4c749
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.directors.field_bio
+    - node.type.directors
+  module:
+    - user
+id: node.directors.teaser
+targetEntityType: node
+bundle: directors
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_bio: true

@@ -1,0 +1,30 @@
+uuid: 884f6979-930c-427a-8f23-fd4ce9444f91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bio
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.plain_text
+    - filter.format.restricted_html
+    - node.type.directors
+  module:
+    - text
+id: node.directors.field_bio
+field_name: field_bio
+entity_type: node
+bundle: directors
+label: Bio
+description: "This field will hold the information of the director's Bio"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - restricted_html
+    - full_html
+    - plain_text
+field_type: text_long
