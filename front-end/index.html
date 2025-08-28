@@ -54,7 +54,7 @@
       <span class="font-semibold text-charcoal text-xl select-none">New Relic.</span>
     </a>
 
-    <nav class="hidden lg:flex space-x-8 font-normal text-base text-charcoal">
+    <nav class="hidden lg:flex space-x-8 font-normal text-base text-gray-600">
       <a href="#" class="hover:text-teal transition">Products</a>
       <a href="#" class="hover:text-teal transition">Pricing</a>
       <a href="#" class="hover:text-teal transition">Solutions</a>
@@ -63,6 +63,17 @@
     </nav>
 
     <div class="hidden lg:flex items-center space-x-4">
+      <!-- Search Icon -->
+      <button class="p-2 rounded-full hover:bg-gray-200">
+        <!-- Heroicon: Search -->
+        <svg xmlns="http://www.w3.org/2000/svg" 
+            fill="none" viewBox="0 0 24 24" 
+            stroke-width="2" stroke="currentColor" 
+            class="w-5 h-5 text-gray-600">
+          <path stroke-linecap="round" stroke-linejoin="round" 
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+        </svg>
+      </button>
       <button class="text-charcoal text-body font-normal hover:text-teal transition">Log in</button>
       <button class="bg-teal px-5 py-2 rounded text-white text-body font-semibold hover:bg-darkteal transition">Sign up</button>
     </div>
@@ -100,17 +111,17 @@
         Simple, transparent pricing plans.<br />
         Only pay for what you use.
       </h1>
-      <p class="text-charcoal text-body font-normal">
+      <p class="text-gray-500 text-body font-normal">
         Start for free. No credit card required.
       </p>
     </section>
 
-    <section class="max-w-7xl mx-auto px-4 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <section class="max-w-7xl mx-auto px-4 py-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0">
           
         <!-- Free -->
-        <div class="rounded md:rounded-l-xl md:rounded-r-none shadow-lg border overflow-hidden">
-        <div class="bg-cyan-600 text-white text-center py-4 font-semibold text-lg">
+        <div class="rounded lg:rounded-l-xl lg:rounded-r-none shadow-lg border overflow-hidden">
+        <div class="bg-cyan-600 text-white px-6 py-4 font-semibold text-lg">
           Free
         </div>
         <div class="p-6">
@@ -135,8 +146,8 @@
         </div>
 
         <!-- Standard -->
-        <div class="shadow-lg border overflow-hidden">
-        <div class="bg-blue-600 text-white text-center py-4 font-semibold text-lg" style="background-color: #0069CE;">
+        <div class="rounded lg:rounded-l-none lg:rounded-r-none shadow-lg border overflow-hidden">
+        <div class="bg-blue text-white px-6 py-4 font-semibold text-lg">
           Standard
         </div>
         <div class="p-6">
@@ -161,8 +172,8 @@
         </div>
 
         <!-- Pro -->
-        <div class="shadow-lg border overflow-hidden">
-        <div class="bg-orange-500 text-white text-center py-4 font-semibold text-lg" style="background-color: #FF8853;">
+        <div class="rounded lg:rounded-l-none lg:rounded-r-none shadow-lg border overflow-hidden">
+        <div class="bg-orange text-white px-6 py-4 font-semibold text-lg">
           Pro
         </div>
         <div class="p-6">
@@ -188,8 +199,8 @@
         </div>
 
         <!-- Enterprise -->
-        <div class="rounded md:rounded-r-xl md:rounded-l-none shadow-lg border overflow-hidden">
-        <div class="bg-gray-900 text-white text-center py-4 font-semibold text-lg">
+        <div class="rounded lg:rounded-r-xl lg:rounded-l-none shadow-lg border overflow-hidden">
+        <div class="bg-gray-800 text-white px-6 py-4 font-semibold text-lg">
           Enterprise
         </div>
         <div class="p-6">
@@ -219,19 +230,19 @@
 
     <section class="hidden lg:block max-w-6xl mx-auto my-12 px-4">
       <!-- Heading -->
-      <h2 class="text-2xl font-semibold text-center mb-6">Compare features and plans</h2>
+      <h2 class="text-2xl font-semibold text-center mb-6 py-10">Compare features and plans</h2>
 
       <!-- Plans row -->
-      <div class="grid grid-cols-5 border-b text-sm font-medium">
+      <div class="grid grid-cols-5 border-b text-md font-medium">
         <div class="border-r"></div>
-        <div class="text-center py-3 border-r" style="border-top-color: #0AB0BF; border-top-width: 4px;">Free</div>
-        <div class="text-center py-3 border-r" style="border-top-color: #0069CE; border-top-width: 4px;">Standard</div>
-        <div class="text-center py-3 border-r" style="border-top-color: #FF8853; border-top-width: 4px;">Pro</div>
-        <div class="text-center py-3" style="border-top-color: #2C2C2C; border-top-width: 4px;">Enterprise</div>
+        <div class="text-center py-4 border-r font-bold bg-gray-100" style="border-top-color: #0AB0BF; border-top-width: 4px;">Free</div>
+        <div class="text-center py-4 border-r font-bold bg-gray-100" style="border-top-color: #0069CE; border-top-width: 4px;">Standard</div>
+        <div class="text-center py-4 border-r font-bold" style="border-top-color: #FF8853; border-top-width: 4px;">Pro</div>
+        <div class="text-center py-4 font-bold bg-gray-100" style="border-top-color: #2C2C2C; border-top-width: 4px;">Enterprise</div>
       </div>
 
       <!-- Section: Data Usage -->
-      <div class="text-xs font-bold uppercase tracking-wide py-8 px-2 border-b">
+      <div class="text-xs font-bold uppercase py-8 px-2 border-b">
         Data Usage
       </div>
 
@@ -283,7 +294,7 @@
 
 
     <!-- Logos section -->
-    <section class="flex gap-1 md:gap-4 lg:gap-10 mb-20 max-w-6xl mx-auto">
+    <section class="flex gap-1 md:gap-4 lg:gap-10 mb-20 max-w-6xl mx-auto py-8">
       <!-- Replace these with real SVG logos or images -->
       <img src="src/images/logos/Homepage_Gray_EpicGames.png" alt="Epic Games" class="h-10 sm:h-12 md:h-14 lg:h-20 object-contain" />
       <img src="src/images/logos/Homepage_Gray_Atlassian.png" alt="Atlassian" class="h-10 sm:h-12 md:h-14 lg:h-20 object-contain" />
@@ -293,121 +304,166 @@
     </section>
 
     <!-- Articles / Benefits cards -->
-    <section class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto mb-20">
-      <article class="border border-gray-200 rounded-md overflow-hidden shadow-sm bg-white flex flex-col">
-        <img src="/src/images/cards/card-1.png" alt="Compare observability costs" class="w-full h-48 object-cover" />
-        <div class="p-4 flex flex-col flex-grow">
-          <h3 class="text-charcoal text-h4 font-semibold mb-2 select-text">
-            Compare full-stack observability costs: New Relic, Datadog, and Dynatrace
-          </h3>
-          <a href="#" class="text-teal text-link font-semibold hover:underline self-start mt-auto" aria-label="Read article Compare full-stack observability costs">
-            Read Article &gt;
-          </a>
-        </div>
-      </article>
+    <section class="max-w-6xl mx-auto mb-20">
+      <!-- Section Heading -->
+      <h2 class="text-2xl text-gray-800 mb-8 text-center">
+        Explore benefits of usage-based pricing
+      </h2>
 
-      <article class="border border-gray-200 rounded-md overflow-hidden shadow-sm bg-white flex flex-col">
-        <img src="/src/images/cards/card-2.png" alt="New Relic consumption pricing" class="w-full h-48 object-cover" />
-        <div class="p-4 flex flex-col flex-grow">
-          <h3 class="text-charcoal text-h4 font-semibold mb-2 select-text">
-            New Relic consumption pricing: Get more value for your money
-          </h3>
-          <a href="#" class="text-teal text-link font-semibold hover:underline self-start mt-auto" aria-label="Read article New Relic consumption pricing">
-            Read Article &gt;
-          </a>
-        </div>
-      </article>
+      <!-- Cards Grid -->
+      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-8">
+        <article class="border border-gray-200 rounded-md overflow-hidden shadow-sm bg-white flex flex-col">
+          <img src="/src/images/cards/card-1.png" alt="Compare observability costs" class="w-full h-48 object-cover" />
+          <div class="p-4 flex flex-col flex-grow">
+            <h3 class="text-charcoal text-h4 font-semibold mb-2 select-text mb-20">
+              Compare full-stack observability costs: New Relic, Datadog, and Dynatrace
+            </h3>
+            <a href="#" class="text-teal text-link font-semibold hover:underline self-start mt-auto" aria-label="Read article Compare full-stack observability costs">
+              Read Article &gt;
+            </a>
+          </div>
+        </article>
 
-      <article class="border border-gray-200 rounded-md overflow-hidden shadow-sm bg-white flex flex-col">
-        <img src="/src/images/cards/card-3.png" alt="New Relic annual pool of funds simplifies observability pricing" class="w-full h-48 object-cover" />
-        <div class="p-4 flex flex-col flex-grow">
-          <h3 class="text-charcoal text-h4 font-semibold mb-2 select-text">
-            New Relic annual pool of funds simplifies observability pricing
-          </h3>
-          <a href="#" class="text-teal text-link font-semibold hover:underline self-start mt-auto" aria-label="Read article New Relic annual pool of funds">
-            Read Article &gt;
-          </a>
-        </div>
-      </article>
+        <article class="border border-gray-200 rounded-md overflow-hidden shadow-sm bg-white flex flex-col">
+          <img src="/src/images/cards/card-2.png" alt="New Relic consumption pricing" class="w-full h-48 object-cover" />
+          <div class="p-4 flex flex-col flex-grow">
+            <h3 class="text-charcoal text-h4 font-semibold mb-2 select-text">
+              New Relic consumption pricing: Get more value for your money
+            </h3>
+            <a href="#" class="text-teal text-link font-semibold hover:underline self-start mt-auto" aria-label="Read article New Relic consumption pricing">
+              Read Article &gt;
+            </a>
+          </div>
+        </article>
+
+        <article class="border border-gray-200 rounded-md overflow-hidden shadow-sm bg-white flex flex-col">
+          <img src="/src/images/cards/card-3.png" alt="New Relic annual pool of funds simplifies observability pricing" class="w-full h-48 object-cover" />
+          <div class="p-4 flex flex-col flex-grow">
+            <h3 class="text-charcoal text-h4 font-semibold mb-2 select-text">
+              New Relic annual pool of funds simplifies observability pricing
+            </h3>
+            <a href="#" class="text-teal text-link font-semibold hover:underline self-start mt-auto" aria-label="Read article New Relic annual pool of funds">
+              Read Article &gt;
+            </a>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-charcoal text-white pt-10 pb-6 px-6 md:px-16">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
 
-      <!-- Try new relic -->
-      <div>
-        <p class="font-semibold text-h4 mb-3">Try New Relic Today</p>
-        <p class="font-normal text-body max-w-xs mb-4 leading-relaxed">Monitor all your systems and data with the entire New Relic Platform. It’s free forever.</p>
-        <div class="flex space-x-3">
-          <button class="bg-teal py-2 px-4 rounded font-semibold text-body hover:bg-darkteal transition">Start for free</button>
-          <button class="border border-white py-2 px-4 rounded font-normal text-body hover:bg-white hover:text-charcoal transition">Get a demo</button>
-        </div>
+  <footer class="bg-charcoal text-gray-300 px-6 md:px-12 py-10">
+  <!-- GRID -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    <!-- CTA Section -->
+    <div>
+      <h3 class="text-white text-lg font-semibold">Try New Relic Today</h3>
+      <p class="text-sm mt-2">
+        Monitor all your systems and data with the entire New Relic Platform. 
+        It's free forever.
+      </p>
+      <div class="flex gap-3 mt-4">
+        <button class="bg-teal hover:bg-darkteal text-white px-4 py-2 rounded">
+          Start for free
+        </button>
+        <button class="border border-white px-4 py-2 rounded hover:bg-white hover:text-gray-900">
+          Get a demo
+        </button>
       </div>
 
-      <!-- Company links -->
-      <div class="grid grid-cols-2 md:grid-cols-1 gap-y-4 text-xs md:text-sm">
-        <h6 class="uppercase font-semibold tracking-wide mb-4 select-none">Company</h6>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-teal transition">About us</a></li>
-          <li><a href="#" class="hover:text-teal transition">Leadership</a></li>
-          <li><a href="#" class="hover:text-teal transition">Careers</a></li>
-          <li><a href="#" class="hover:text-teal transition">Diversity and Inclusion</a></li>
-          <li><a href="#" class="hover:text-teal transition">Social Impact</a></li>
-          <li><a href="#" class="hover:text-teal transition">Newsroom</a></li>
-        </ul>
-      </div>
-
-      <!-- Customers links -->
-      <div class="grid grid-cols-2 md:grid-cols-1 gap-y-4 text-xs md:text-sm">
-        <h6 class="uppercase font-semibold tracking-wide mb-4 select-none">Customers</h6>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-teal transition">Customer stories</a></li>
-          <li><a href="#" class="hover:text-teal transition">Partner Program</a></li>
-          <li><a href="#" class="hover:text-teal transition">Investor Relations</a></li>
-          <li><a href="#" class="hover:text-teal transition">Suppliers Portal</a></li>
-          <li><a href="#" class="hover:text-teal transition">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Follow us -->
-      <div>
-        <h6 class="uppercase font-semibold tracking-wide mb-4 select-none">Follow Us</h6>
-        <div class="flex space-x-4 text-white text-xl">
-          <a href="#" aria-label="GitHub" class="hover:text-teal transition">GitHub</a>
-          <a href="#" aria-label="Twitch" class="hover:text-teal transition">Twitch</a>
-          <a href="#" aria-label="Twitter" class="hover:text-teal transition">Twitter</a>
-          <a href="#" aria-label="Facebook" class="hover:text-teal transition">Facebook</a>
-        </div>
-        <div class="flex space-x-4 text-white text-xl mt-3">
-          <a href="#" aria-label="LinkedIn" class="hover:text-teal transition">LinkedIn</a>
-          <a href="#" aria-label="Instagram" class="hover:text-teal transition">Instagram</a>
-          <a href="#" aria-label="YouTube" class="hover:text-teal transition">YouTube</a>
+      <!-- Social (only shows inside CTA column on tablet) -->
+      <div class="mt-8 lg:hidden">
+        <h4 class="text-white font-semibold uppercase mb-2">Follow Us</h4>
+        <div class="flex flex-wrap gap-4 mt-2">
+          <a href="#"><i class="fab fa-github text-xl hover:text-white"></i></a>
+          <a href="#"><i class="fab fa-twitch text-xl hover:text-white"></i></a>
+          <a href="#"><i class="fab fa-twitter text-xl hover:text-white"></i></a>
+          <a href="#"><i class="fab fa-facebook text-xl hover:text-white"></i></a>
+          <a href="#"><i class="fab fa-linkedin text-xl hover:text-white"></i></a>
+          <a href="#"><i class="fab fa-instagram text-xl hover:text-white"></i></a>
+          <a href="#"><i class="fab fa-youtube text-xl hover:text-white"></i></a>
         </div>
       </div>
     </div>
 
-    <hr class="border-gray-600 my-6" />
+    <!-- Company Links -->
+    <div>
+      <h4 class="text-white font-semibold uppercase mb-2">Company</h4>
 
-    <!-- Bottom footer -->
-    <div class="flex flex-col md:flex-row justify-between items-center space-y-3 md:space-y-0 text-xs text-gray-400 select-none">
-      <p>©2008-20 New Relic, Inc. All rights reserved</p>
-      <nav class="space-x-3">
-        <a href="#" class="hover:text-teal transition">Terms of Service</a>
-        <a href="#" class="hover:text-teal transition">DMCA Policy</a>
-        <a href="#" class="hover:text-teal transition">Privacy Policy</a>
-        <a href="#" class="hover:text-teal transition">Cookie Policy</a>
-        <a href="#" class="hover:text-teal transition">UK Slavery Act of 2015</a>
-      </nav>
-      <nav class="space-x-3 flex flex-wrap justify-center md:justify-start">
-        <a href="#" class="hover:text-teal transition">日本語</a>
-        <a href="#" class="hover:text-teal transition">Français</a>
-        <a href="#" class="hover:text-teal transition">Deutsch</a>
-        <a href="#" class="hover:text-teal transition">한국어</a>
-      </nav>
+      <!-- Mobile: single list -->
+      <ul class="space-y-2 md:hidden">
+        <li><a href="#" class="hover:text-white">About us</a></li>
+        <li><a href="#" class="hover:text-white">Leadership</a></li>
+        <li><a href="#" class="hover:text-white">Careers</a></li>
+        <li><a href="#" class="hover:text-white">Diversity and Inclusion</a></li>
+        <li><a href="#" class="hover:text-white">Social Impact</a></li>
+        <li><a href="#" class="hover:text-white">Newsroom</a></li>
+        <li><a href="#" class="hover:text-white">Customers</a></li>
+        <li><a href="#" class="hover:text-white">Partner Program</a></li>
+        <li><a href="#" class="hover:text-white">Investor Relations</a></li>
+        <li><a href="#" class="hover:text-white">Suppliers Portal</a></li>
+        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+      </ul>
+
+      <!-- Tablet & above: 2 columns -->
+      <div class="hidden md:grid grid-cols-2 gap-6 text-sm">
+        <ul class="space-y-3">
+          <li><a href="#" class="hover:text-white">About us</a></li>
+          <li><a href="#" class="hover:text-white">Leadership</a></li>
+          <li><a href="#" class="hover:text-white">Careers</a></li>
+          <li><a href="#" class="hover:text-white">Diversity and Inclusion</a></li>
+          <li><a href="#" class="hover:text-white">Social Impact</a></li>
+          <li><a href="#" class="hover:text-white">Newsroom</a></li>
+        </ul>
+        <ul class="space-y-3">
+          <li><a href="#" class="hover:text-white">Customers</a></li>
+          <li><a href="#" class="hover:text-white">Partner Program</a></li>
+          <li><a href="#" class="hover:text-white">Investor Relations</a></li>
+          <li><a href="#" class="hover:text-white">Suppliers Portal</a></li>
+          <li><a href="#" class="hover:text-white">Contact Us</a></li>
+        </ul>
+      </div>
     </div>
+
+    <!-- Social (dedicated column on desktop) -->
+    <div class="hidden lg:block">
+      <h4 class="text-white font-semibold uppercase mb-2">Follow Us</h4>
+      <div class="flex flex-wrap gap-4 mt-2">
+        <a href="#"><i class="fab fa-github text-xl hover:text-white"></i></a>
+        <a href="#"><i class="fab fa-twitch text-xl hover:text-white"></i></a>
+        <a href="#"><i class="fab fa-twitter text-xl hover:text-white"></i></a>
+        <a href="#"><i class="fab fa-facebook text-xl hover:text-white"></i></a>
+        <a href="#"><i class="fab fa-linkedin text-xl hover:text-white"></i></a>
+        <a href="#"><i class="fab fa-instagram text-xl hover:text-white"></i></a>
+        <a href="#"><i class="fab fa-youtube text-xl hover:text-white"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="border-t border-gray-700 mt-10 pt-5 text-sm flex flex-col md:flex-row justify-between items-center">
+    <!-- Policies -->
+    <div class="flex flex-wrap gap-4">
+      <a href="#" class="hover:text-white">Terms of Service</a>
+      <a href="#" class="hover:text-white">DMCA Policy</a>
+      <a href="#" class="hover:text-white">Privacy Policy</a>
+      <a href="#" class="hover:text-white">Cookie Policy</a>
+      <a href="#" class="hover:text-white">UK Slavery Act of 2015</a>
+    </div>
+    <!-- Language links -->
+    <div class="flex gap-4 mb-3 md:mb-0">
+      <a href="#" class="hover:text-white">日本語</a>
+      <a href="#" class="hover:text-white">Français</a>
+      <a href="#" class="hover:text-white">Deutsch</a>
+      <a href="#" class="hover:text-white">한국어</a>
+    </div>
+  </div>
+
+  <p class="text-xs text-gray-500 mt-4">©2008-20 New Relic, Inc. All rights reserved</p>
   </footer>
+
   <script>
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileMenu = document.getElementById('mobileMenu');
