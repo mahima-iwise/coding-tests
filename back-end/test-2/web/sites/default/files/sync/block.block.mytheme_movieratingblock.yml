@@ -1,16 +1,15 @@
-uuid: 9f7e8050-6e4b-40ed-b66b-ab871953e9be
+uuid: 54407099-57c6-4619-969e-55569c371970
 langcode: en
 status: true
 dependencies:
   module:
     - movie_rating
     - node
-    - system
   theme:
-    - olivero
-id: olivero_movieratingblock
-theme: olivero
-region: sidebar
+    - mytheme
+id: mytheme_movieratingblock
+theme: mytheme
+region: sidebar_left
 weight: -8
 provider: null
 plugin: movie_rating_block
@@ -27,7 +26,3 @@ visibility:
       node: '@node.node_route_context:node'
     bundles:
       movies: movies
-  request_path:
-    id: request_path
-    negate: false
-    pages: /movies

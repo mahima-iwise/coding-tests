@@ -1,15 +1,15 @@
-uuid: e6d6a40f-6a13-4158-8442-f67b32877337
+uuid: b14a2ddf-d412-4e64-8494-7d3f854da9bf
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - olivero
+    - mytheme
 _core:
   default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
-id: olivero_content
-theme: olivero
+id: mytheme_content
+theme: mytheme
 region: content
 weight: -9
 provider: null
